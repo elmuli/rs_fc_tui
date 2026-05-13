@@ -1,7 +1,7 @@
 use ratatui::Frame;
 use ratatui::layout::{Constraint, Layout, Rect, Margin};
 use ratatui::style::{Color, Modifier, Style, Stylize};
-use ratatui::widgets::{Block, Paragraph};
+use ratatui::widgets::{Block, Paragraph, Clear};
 use ratatui::text::{Line, Text};
 
 use crate::app;
@@ -43,15 +43,17 @@ fn draw_layout(frame: &mut Frame, app: &app::App) {
 fn draw_help_screen(frame: &mut Frame){
     use Constraint::{Fill, Length, Min};
 
-    let center_area = Rect::new(frame.area().width/3, frame.area().height/3, 2*frame.area().width/3, 2*frame.area().height/3);
+    let center_area = Rect::new(frame.area().width/4, frame.area().height/4, frame.area().width/2, frame.area().height/2);
 
+    frame.render_widget(Clear, center_area);
     let help_block = Block::bordered().title("Help");
     let inner_area = center_area.inner(Margin::new(2,1));
     frame.render_widget(help_block, center_area);
 
     let text = Text::from(vec![
         Line::from("q:  quit".bold().yellow()),
-        Line::from("?:  help".italic().cyan()),
+        Line::from("?:  help".bold().yellow()),
+        Line::from("Esc:  back".bold().yellow())
     ]);
     let lines = text.height() as u16;
 

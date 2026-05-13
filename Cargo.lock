@@ -324,7 +324,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "fc_cli"
+name = "fc_tui"
 version = "0.1.0"
 dependencies = [
  "crossterm",
