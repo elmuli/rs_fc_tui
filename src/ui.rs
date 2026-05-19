@@ -24,10 +24,12 @@ fn draw_layout(frame: &mut Frame, app: &app::App) {
     let inner_area = right_block.inner(right_area);
     frame.render_widget(right_block, right_area);
 
+    let card: app::Card = app::get_card(1);
+
     let text = Text::from(vec![
-        Line::from("水".bold().yellow()),
-        Line::from("みず".italic().cyan()),
-        Line::from("water".dim()),
+        Line::from(card.word.bold().yellow()),
+        Line::from(card.kana.italic().cyan()),
+        Line::from(card.translation.dim()),
     ]);
     let lines = text.height() as u16;
 
