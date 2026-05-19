@@ -1,5 +1,24 @@
 {
 "cards":[
-    {"word": "水","kana":"みず","translation":"water"}
+    {"word": "水","kana":"みず","translation":"water"},
+    {"word": "火","kana":"ひ","translation":"fire"},
+    {"word": "木","kana":"き","translation":"tree"},
+    {"word": "山","kana":"やま","translation":"mountain"},
+    {"word": "川","kana":"かわ","translation":"river"},
+    {"word": "空","kana":"そら","translation":"sky"},
+    {"word": "雨","kana":"あめ","translation":"rain"},
+    {"word": "風","kana":"かぜ","translation":"wind"},
+    {"word": "土","kana":"つち","translation":"soil"},
+    {"word": "石","kana":"いし","translation":"stone"},
+    {"word": "花","kana":"はな","translation":"flower"},
+    {"word": "草","kana":"くさ","translation":"grass"},
+    {"word": "犬","kana":"いぬ","translation":"dog"},
+    {"word": "猫","kana":"ねこ","translation":"cat"},
+    {"word": "魚","kana":"さかな","translation":"fish"},
+    {"word": "鳥","kana":"とり","translation":"bird"},
+    {"word": "人","kana":"ひと","translation":"person"},
+    {"word": "日","kana":"ひ","translation":"sun/day"},
+    {"word": "月","kana":"つき","translation":"moon"},
+    {"word": "力","kana":"ちから","translation":"power"}
 ]
 }

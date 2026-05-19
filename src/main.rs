@@ -8,6 +8,7 @@ fn main() -> std::io::Result<()> {
     let mut app = app::App{
         should_quit: false,
         is_help: false,
+        card_index: 0,
     };
 
     ratatui::run(|mut terminal| {
@@ -27,6 +28,7 @@ fn handle_events(app: &mut app::App) -> std::io::Result<bool> {
             KeyCode::Char('q') => app.should_quit = true,
             KeyCode::Char('?') => app.is_help = true,
             KeyCode::Esc => app.is_help = false,
+            KeyCode::Char('n') => app.card_index = app::calculate_card_index(),
             _ => {}
         },
       _ => {}

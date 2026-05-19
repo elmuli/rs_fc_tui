@@ -24,7 +24,7 @@ fn draw_layout(frame: &mut Frame, app: &app::App) {
     let inner_area = right_block.inner(right_area);
     frame.render_widget(right_block, right_area);
 
-    let card: app::Card = app::get_card(1);
+    let card: app::Card = app::get_card(app.card_index);
 
     let text = Text::from(vec![
         Line::from(card.word.bold().yellow()),
@@ -55,6 +55,7 @@ fn draw_help_screen(frame: &mut Frame){
     let text = Text::from(vec![
         Line::from("q:  quit".bold().yellow()),
         Line::from("?:  help".bold().yellow()),
+        Line::from("n:  next card".bold().yellow()),
         Line::from("Esc:  back".bold().yellow())
     ]);
     let lines = text.height() as u16;
