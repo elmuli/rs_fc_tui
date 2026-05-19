@@ -14,7 +14,7 @@ fn draw_layout(frame: &mut Frame, app: &app::App) {
     use Constraint::{Fill, Length, Min};
 
     let [title_area, main_area, status_area] = Layout::vertical([Length(1), Min(0), Length(1)]).areas(frame.area());
-    let [left_area, right_area] = Layout::horizontal([Length(20), Fill(1)]).areas(main_area);
+    let [left_area, right_area] = Layout::horizontal([Length(35), Fill(1)]).areas(main_area);
 
     frame.render_widget(Block::bordered().title("Flascard TUI".yellow().bold()), title_area);
     frame.render_widget(Block::bordered().title("Left Area").blue(), left_area);
@@ -59,7 +59,10 @@ fn draw_help_screen(frame: &mut Frame){
     ]);
     let lines = text.height() as u16;
 
-
     let paragraph = Paragraph::new(text).centered();
     frame.render_widget(paragraph, inner_area);
+}
+
+fn draw_card_list(frame: &mut Frame ) {
+    use Constraint::{Fill, Length, Min};
 }
