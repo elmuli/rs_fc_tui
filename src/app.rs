@@ -23,10 +23,10 @@ fn read_cards(path: &Path) -> Vec<Card> {
     deck.cards
 }
 
-pub fn get_card(index: usize) -> Card{
-    let path = Path::new("cards/cards.json");
+pub fn get_card(card_index: usize, deck_name: String) -> Card{
+    let path = Path::new("cards/{deck_name}.json");
     let cards = read_cards(path);
-    let card = cards[index].clone();
+    let card = cards[card_index].clone();
     card
 }
 
